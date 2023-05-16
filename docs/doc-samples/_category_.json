@@ -1,0 +1,8 @@
+{
+  "label": "Technical Documentation Samples",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "A collection of technical documentation samples"
+  }
+}
