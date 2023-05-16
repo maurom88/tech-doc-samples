@@ -7,100 +7,79 @@ sidebar_position: 30
 # Getting Started with Markdown in Zendesk: A Quick Reference Guide
 
 ## Introduction
-This document serves as a quick reference guide for using Markdown syntax in Zendesk. Markdown is a lightweight markup language that allows you to format and style text in a simple and intuitive way. By leveraging Markdown in Zendesk, you can enhance the readability and organization of your content.
+This document is written for Customer Support Representative as a quick reference guide for using Markdown syntax in Zendesk. Markdown is a markup language that allows you to format and style text in a simple and intuitive way.
+
+For a more detailed reference guide visit: [Formatting text with Markdown – Zendesk help](https://support.zendesk.com/hc/en-us/articles/4408846544922-Formatting-text-with-Markdown#topic_xqx_mvc_43__row_lhh_xln_1n)
 
 ## Table of Contents
-- [Basic Formatting](#basic-formatting)
-  - [Headings](#headings)
-  - [Text Formatting](#text-formatting)
-  - [Lists](#lists)
-  - [Links](#links)
-  - [Images](#images)
-- [Advanced Formatting](#advanced-formatting)
-  - [Tables](#tables)
-  - [Code Blocks](#code-blocks)
-  - [Blockquotes](#blockquotes)
-- [Conclusion](#conclusion)
+- [Headings](#headings)
+- [Text Formatting](#text-formatting)
+- [Lists](#lists)
+- [Links](#links)
+- [Images](#images)
+- [Inline code](#inline-code)
+- [Code Blocks](#code-blocks)
 
-## Basic Formatting
-
-### Headings
-You can create headings using the '#' symbol followed by a space and the heading text. The number of '#' symbols determines the level of the heading.
+## Headings
+You can create headings using the '#' symbol, followed by a space and the heading text. The number of '#' symbols determines the level of the heading. The lower the number, the higher the priority/importance.
 
 Example:
 ```
 # Heading 1
 ## Heading 2
-### Heading 3
+## Heading 3
 ```
 
-### Text Formatting
-You can apply basic text formatting using the following Markdown syntax:
+## Text Formatting
+You can apply basic text formatting (bold, italics, strikethrough) using the following Markdown syntax:
 
 - **Bold**: Enclose the text within double asterisks (\*\*text\*\*) or double underscores (\_\_text\_\_).
-- *Italic*: Enclose the text within single asterisks (\*text\*) or single underscores (\_text\_).
+- *Italics*: Enclose the text within single asterisks (\*text\*) or single underscores (\_text\_).
 - ~~Strikethrough~~: Enclose the text within double tildes (\~\~text\~\~).
 
-### Lists
-You can create ordered and unordered lists using Markdown syntax.
+## Lists
 
-Example:
+To create ordered lists, use the `-` symbol at the beginning of each line:
 ```
 - Item 1
 - Item 2
 - Item 3
 ```
+
+To create ordered lists, use a number followed by a `.`:
 ```
 1. Item 1
 2. Item 2
 3. Item 3
 ```
 
-### Links
-You can create hyperlinks using Markdown syntax. Place the link text in square brackets and the URL in parentheses.
+## Links
+You can create hyperlinks by placing the link text in square brackets and the URL in parentheses:
+
+```
+[Mauro's Technical Documentation source code](https://github.com/maurom88/tech-doc-samples)
+```
+
+## Images
+To add images: place the alt text in square brackets and the image URL in parentheses.
 
 Example:
 ```
-[OpenAI](https://www.openai.com)
+![A placeholder image](https://picsum.photos/200)
 ```
 
-### Images
-You can include images in your content using Markdown syntax. Place the alt text in square brackets and the image URL in parentheses.
+## Inline code
+You can highlight a piece of code in line by enclosing the code within (\`):
 
-Example:
 ```
-![Image Alt Text](https://example.com/image.jpg)
-```
-
-## Advanced Formatting
-
-### Tables
-You can create tables using Markdown syntax. Separate columns using pipes (|) and use hyphens (-) to create the table header.
-
-Example:
-```
-| Column 1 | Column 2 |
-| -------- | -------- |
-| Value 1  | Value 2  |
-| Value 3  | Value 4  |
+This is how you would write some `inline code`.
 ```
 
-### Code Blocks
-You can highlight code snippets or blocks using Markdown syntax. Enclose the code within triple backticks (\`\`\`).
+## Code Blocks
+You can highlight code snippets or blocks by enclosing the code within triple backticks (\`\`\`). In the following example, remove the backslashes (`\`) to properly use the codeblock:
 
-Example:
-\```python
+```
+\```
 print("Hello, world!")
 \```
-
-### Blockquotes
-You can create blockquotes to emphasize a section of text. Prefix the text with a greater-than symbol (>).
-
-Example:
 ```
-> This is a blockquote.
-> It can span multiple lines.
-```
-
-## Conclusion
-Markdown provides a simple and efficient way to format and structure your content in Zendesk. By mastering the basic and advanced formatting techniques outlined in this guide, you can enhance the readability and visual appeal of your documentation. Happy Markdowning!
