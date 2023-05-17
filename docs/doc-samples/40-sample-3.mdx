@@ -1,11 +1,114 @@
 ---
-title: "Doc title"
-sidebar_label: "Sample 3"
+title: "Git 101"
+sidebar_label: "Git 101"
 sidebar_position: 40
 ---
 
-Technical document for something
+# Git101
+This guide has been created for web development students who are approaching Git and Github for the first time and to help them by providing a simple workflow to ensure that they can push their code comfortably whether they are working on their own or in groups.
 
-## Subtitle
+## Prerequisites
+*Follow the links for the official guides.*
 
-## Another subtitle
+1. Create a Github account: [Signing up for a new GitHub account - GitHub Docs](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+1. Install Git: [Git - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+1. Install a code editor, for example Visual Studio Code: [Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/download)
+
+## Section 1: Create and clone a repository
+
+In this section you will:
+1. Create a new remote repository in GitHub.
+1. Clone the new repository on your computer.
+
+### Create a new remote repository in GitHub
+
+Go to https://www.github.com and create a new repository by clicking the `+` sign on the top-right, then `New repository`.
+
+![New repository menu](/img/git-walkthrough//001.png)
+
+Enter the required information about your repository.
+The only mandatory field is "name", but checking at least "Add a README file", is a good option when starting out.
+
+![New repository panel](/img/git-walkthrough//002.png)
+
+In the repository you have just created, click the green button "Code" and copy the https url.
+
+![Clone url](/img/git-walkthrough//003.png)
+
+### Clone the new repository on your computer
+
+On your computer, open a terminal or command prompt and go to the folder where you want to save your local repository (Desktop in the example).
+Use `git clone` followed by the url you copied before, to clone the remote repository on your computer.
+
+![Git clone](/img/git-walkthrough//004.png)
+
+At this point, you will have a folder with the same name as your repository.
+Use `cd <folder_name>` to get inside your folder.
+
+![cd folder](/img/git-walkthrough//006.png)
+
+## Section 2: Apply changes locally
+
+In this section you will:
+1. Create a new branch.
+1. Make some changes.
+1. Commit the changes you made.
+
+Whenever you need to make some changes on a repository, starting from the default branch (usually `main` or `master`), you need to create a new branch with the command: `git branch <new_branch_name>`.
+Then, switch to the new branch you have just created: `git checkout <branch_name>`.
+
+![Create and switch branch](/img/git-walkthrough//007.png)
+
+Make some changes (for example, I have created a text file called "newFile" in my folder).
+
+![newFile](/img/git-walkthrough//008.png)
+
+Now, you have to tell git that you want these changes to be saved, and you do so with two commands:
+1. `git add <file_name>`.
+1. `git commit -m "Some message"`.
+
+In the example below, I could have used `git add newFile.txt` but, for the sake of simplicity, I used `git add .` which means that I want to add all my changed files.
+
+![Git add and commit](/img/git-walkthrough//009.png)
+
+## Section 3: Push updated repository to GitHub, merge to main/master
+
+In this section you will:
+1. Use `git push` to update a remote repository.
+
+Now that everything is updated locally, we can use `git push` to update the repository on GitHub
+
+![New repository panel](/img/git-walkthrough//010.png)
+
+The only problem is that, even though Git knows which repository to push the contents to (because we cloned it), it doesn't know where to put this specific branch, because it has only been created locally.
+Following exactly the instructions in the output message, will solve this issue: `git push --set-upstream origin <branch_name>` (with this, we create a remote branch with the same name as the local one and set that one as the origin for this branch).
+
+![New repository panel](/img/git-walkthrough//011.png)
+
+Once `push` has completed uploading the new branch with all its files, let's go back to https://www.github.com and open the repository. A message will say that there is a new branch with recent changes. Click the green button "Compare & pull request"
+
+![Compare and pull request](/img/git-walkthrough//012.png)
+
+In the following steps, simply clicking the green buttons in sequence will allow you to merge the contents from the new branch to main/master.
+
+![Create pull request](/img/git-walkthrough//013.png)
+
+![Merge](/img/git-walkthrough//014.png)
+
+At the end, you can decide to delete the new branch, but this will only remove it from GitHub! The local branch, on your computer, will remain intact.
+
+![Merge complete](/img/git-walkthrough//015.png)
+
+## Section 4: Update your local main/master and keep working
+
+Now, we only need to update our local repository. In you command prompt, first switch back to the main repository with `git checkout main`.
+
+![Checkout main](/img/git-walkthrough//016.png)
+
+Pull the most recent changes: `git pull`.
+This is particularly important to be done frequently when working with other people! If someone else makes changes and merge a branch to main, using `pull` will ensure that you have the most updated files on your computer and not risk messing up somebody else's work.
+
+![Git pull](/img/git-walkthrough//017.png)
+
+### Final comments and remarks
+If you need to apply more changes, go back to Section 2: Apply changes locally and repeat the procedure until the end.
