@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_doc_samples=self.webpackChunktech_doc_samples||[]).push([[158],{1292:e=>{e.exports=JSON.parse('{"permalink":"/tech-doc-samples/blog/tags/github-actions","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
